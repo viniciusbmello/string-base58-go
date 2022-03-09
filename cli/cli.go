@@ -19,7 +19,7 @@ const (
 	exitCodeErr
 )
 
-func (cli *cli) Run(args []string) int {
+func (cli *cli) run(args []string) int {
 	var opts struct {
 		Decode   bool             `short:"D" long:"decode" description:"decodes input"`
 		Encoding *base58.Encoding `short:"e" long:"encoding" default:"flickr" choice:"flickr" choice:"ripple" choice:"bitcoin" description:"encoding name"`
